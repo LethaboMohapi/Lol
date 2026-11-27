@@ -53,8 +53,8 @@ body {
 
 .brand img {
   display: block;
-  width: clamp(3.5rem, 8vw, 5.25rem);
-  height: clamp(3.5rem, 8vw, 5.25rem);
+  width: 55px;
+  height: 55px;
   object-fit: contain;
   filter: drop-shadow(0 0 0.8rem var(--glow));
 }

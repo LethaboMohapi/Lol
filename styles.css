@@ -35,8 +35,8 @@ body {
 .site-header {
   position: absolute;
   z-index: 2;
-  top: clamp(1rem, 3vw, 1.75rem);
-  left: clamp(1rem, 3vw, 2.5rem);
+  top: clamp(1.25rem, 4vw, 2.75rem);
+  left: clamp(1.25rem, 4vw, 2.75rem);
 }
 
 .brand {
@@ -49,38 +49,54 @@ body {
   border-radius: 0.9rem;
   background: transparent;
   box-shadow: none;
+  transition: transform 180ms ease, filter 180ms ease;
 }
 
 .brand img {
-  display: block;
   width: 55px;
   height: 55px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 0.8rem var(--glow));
 }
 
 .brand:hover,
 .brand:focus-visible {
   background: transparent;
   box-shadow: none;
+  transform: translateY(-2px) scale(1.04);
+  filter: brightness(1.12);
+}
+
+.profile footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.65rem;
+  background: rgb(25 200 255 / 10%);
+  box-shadow: 0 0 1.5rem var(--glow);
+  color: #fff;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background-color 180ms ease,
+              box-shadow 180ms ease,
+              transform 180ms ease,
+              border-color 180ms ease;
+}
+
+.profile footer a:hover,
+.profile footer a:focus-visible {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 2rem var(--glow),
+              0 0.5rem 1.25rem rgb(22 139 255 / 18%);
+  color: #fff;
+  outline: none;
   transform: translateY(-2px);
 }
 
-.profile {
-  position: relative;
-  isolation: isolate;
-  width: min(100%, 44rem);
-  padding: clamp(1.75rem, 6vw, 4rem);
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1.5rem;
-  box-shadow:
-    0 1.5rem 4rem rgb(0 0 0 / 52%),
-    0 0 2.5rem rgb(25 200 255 / 7%),
-    inset 0 1px 0 rgb(255 255 255 / 11%);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+.profile footer a:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0.75rem var(--glow);
 }
 
 .profile::before {

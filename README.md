@@ -2,3 +2,5 @@
 
 Hi, I'm Lethabo Mohapi, a software development student and full-stack developer based in South Africa. 
 I enjoy building practical applications with technologies like C#, ASP.NET Core, Java, JavaScript, and SQL.
+
+My name is Lethabo And a I'm such a goat probably the best
